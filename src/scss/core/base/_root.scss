@@ -1,0 +1,62 @@
+/*--------------------------------------------------*\
+  =Root
+\*--------------------------------------------------*/
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 100%;
+  min-width: $site-width;
+  height: 100%;
+  overflow-y: scroll;
+  background: $color-body-background;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+body {
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  color: $color-text;
+  background-color: $color-body-background;
+  position: relative;
+  height: 100%;
+}
+
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+table,
+figure,
+pre {
+  margin: 0 0 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}

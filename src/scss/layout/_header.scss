@@ -1,0 +1,46 @@
+/*--------------------------------------------------*\
+  =Header
+\*--------------------------------------------------*/
+
+.header {
+  position: relative;
+  height: 120px;
+  background-color: get-color('secondary', 'light');
+  padding-bottom: 3px;
+
+  @include p-el(before) {
+    @include size(100% 3px);
+    @include linear-gradient(to right, #e7eff3 0%, #1d677b 50%, #e7eff3 100%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__inner {
+    max-width: 1200px;
+    height: 100%;
+    position: relative;
+    padding: 0 $site-padding;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    position: absolute;
+    left: $site-padding;
+    top: 38px;
+  }
+
+  &__socials {
+    position: absolute;
+    right: $site-padding;
+    top: 35px;
+  }
+
+}

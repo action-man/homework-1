@@ -1,0 +1,90 @@
+/*--------------------------------------------------*\
+  =Person Details
+\*--------------------------------------------------*/
+
+.person-details {
+
+
+
+  /**
+   * Elements
+   */
+
+  &__content {
+    @extend %clearfix;
+  }
+
+  &__side {
+    float: left;
+    width: 150px;
+    margin-right: 20px;
+  }
+
+  &__avatar {
+    @include size(150px 150px);
+    border: 5px solid get-color('primary', 'darker');
+    border-radius: 100%;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+
+  &__avatar-image {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__body {
+    overflow: hidden;
+    //margin-left: 175px;
+  }
+
+  &__data {
+    @extend %reset-dlist;
+    @extend %clearfix;
+    margin-top: -10px;
+  }
+
+  &__data-key {
+    font-family: $font-medium;
+    font-size: 17px;
+    float: left;
+    clear: left;
+    padding-right: 20px;
+    margin-top: 10px;
+    max-width: 50%;
+  }
+
+  &__data-value {
+    float: left;
+    overflow: hidden;
+    font-family: $font-book;
+    line-height: 23px;
+    margin-top: 10px;
+    max-width: 50%;
+  }
+
+  &__skills {
+    @extend %reset-list;
+    margin-top: -5px;
+  }
+
+  &__skills-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3px;
+    margin-top: 7px;
+    padding: 0 12px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: $font-medium;
+    color: white;
+    line-height: 1.6;
+    @include linear-gradient(to bottom, get-color('primary', 'darker') 0%, get-color('primary', 'darker') 50%, #2e8ca2 50%, #2e8ca2 100%);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+  }
+
+}

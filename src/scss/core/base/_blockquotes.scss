@@ -1,0 +1,24 @@
+/* ========================================================================== *\
+   =Blockquotes
+\* ========================================================================== */
+
+blockquote {
+  margin: 0 0 10px;
+  font-size: $font-size-base;
+  position: relative;
+  padding-left: 15px;
+  border-left: 2px solid get-color('secondary');
+
+  small,
+  cite {
+    display: block;
+    color: get-color('secondary');
+    text-align: left;
+
+    &:before {
+      content: '\2014 \00A0';
+    }
+
+  }
+
+}

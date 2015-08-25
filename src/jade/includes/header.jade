@@ -1,0 +1,12 @@
+// header
+header(class="header")
+  div(class="header__inner")
+
+
+    // main logo
+    a(href="/", class="header__logo main-logo")
+      img(src="images/main-logo.png", alt="LoftSchool", width="243", height="42")
+
+
+    // socials
+    +socials({vk: 'ВКонтакте', tw: 'Twitter', fb: 'Facebook', git: 'GitHub'})(class="header__socials")

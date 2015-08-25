@@ -1,0 +1,7 @@
+mixin nav(items, currentIndex)
+  nav(class="nav")&attributes(attributes)
+    each item, idx in items
+      if idx == currentIndex
+        span(class="nav__link is-current")= item
+      else
+        a(href="#", class="nav__link")= item

@@ -9,14 +9,15 @@ var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
     uglify      = require('gulp-uglify'),
     gutil       = require('gulp-util'),
-    spritesmith = require('gulp.spritesmith');
+    spritesmith = require('gulp.spritesmith'),
+    jade        = require('gulp-jade');
 
 
 var paths = {
 
   // пути, по которым будут находиться собранные файлы
   build: {
-    html   : 'dist/',
+    templates   : 'dist/',
     style  : 'dist/css/',
     js     : 'dist/js/',
     img    : 'dist/images/',
@@ -29,7 +30,7 @@ var paths = {
 
   // пути, по которым находятся исходники
   src: {
-    html   : ['src/**/*.html', '!src/partials/*.html'],
+    templates   : ['src/jade/*.jade'],
     style  : 'src/scss/main.scss',
     js     : ['src/js/libs.js', 'src/js/vendor.js', 'src/js/main.js', 'src/js/polyfills/*.*'],
     img    : ['src/images/**/*.*', '!src/images/sprite/*.*'],
@@ -39,7 +40,7 @@ var paths = {
 
   // пути к файлам, за изменениями которых будем следить
   watch: {
-    html   : 'src/**/*.html',
+    templates   : 'src/jade/**/*.jade',
     style  : 'src/scss/**/*.scss',
     js     : 'src/js/**/*.js',
     img    : ['src/images/**/*.*', '!src/images/sprite/*.*'],
@@ -52,10 +53,12 @@ var paths = {
 };
 
 
-gulp.task('html', function () {
-  gulp.src(paths.src.html)
-    .pipe(rigger())
-    .pipe(gulp.dest(paths.build.html));
+gulp.task('templates', function() {
+  return gulp.src(paths.src.templates)
+    .pipe(jade({
+      pretty: true
+    }))
+    .pipe(gulp.dest(paths.build.templates))
 });
 
 
@@ -118,7 +121,7 @@ gulp.task('clean', function () {
 
 
 gulp.task('watch', function() {
-  gulp.watch([paths.watch.html], ['html']);
+  gulp.watch([paths.watch.templates], ['templates']);
   gulp.watch([paths.watch.style], ['styles']);
   gulp.watch([paths.watch.js], ['js']);
   gulp.watch([paths.watch.img], ['img']);
@@ -128,12 +131,12 @@ gulp.task('watch', function() {
 
 
 gulp.task('build', [
-  'html',
+  'templates',
   'styles',
   'js',
   'img',
   'fonts'
-])
+]);
 
 
 gulp.task('default', ['watch']);

@@ -1,0 +1,130 @@
+/*--------------------------------------------------*\
+  =Helpers
+\*--------------------------------------------------*/
+
+%pseudos {
+  content: '';
+  position: absolute;
+}
+
+%clearfix {
+
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
+
+}
+
+%visuallyhidden,
+.u-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+%reset-link-border {
+
+  &,
+  &:hover,
+  &:hover .link {
+    border: 0;
+  }
+
+}
+
+%reset-list {
+  
+  &,
+  & ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+}
+
+%reset-dlist {
+  margin-bottom: 0;
+
+  dt {
+    font-weight: normal;
+  }
+
+  dd {
+    padding-left: 0;
+  }
+
+}
+
+
+
+
+
+
+.u-cf {
+  @extend clearfix();
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-text-left {
+  text-align: left !important;
+}
+
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-text-right {
+  text-align: right !important;
+}
+
+// .u-muted {
+//   color: $color-muted !important;
+// }
+
+.u-nowrap {
+  white-space: nowrap !important;
+}
+
+.u-noborder {
+  border: none !important;
+}
+
+
+
+/**
+ * Useful for vertical alignment in table cells
+ */
+
+.u-v-top {
+  vertical-align: top !important;
+}
+
+.u-v-middle {
+  vertical-align: middle !important;
+}
+
+.u-v-bottom {
+  vertical-align: bottom !important;
+}

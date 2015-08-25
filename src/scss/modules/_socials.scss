@@ -1,0 +1,67 @@
+/*--------------------------------------------------*\
+  =Socials
+\*--------------------------------------------------*/
+
+.socials {
+  @extend %reset-list;
+
+
+  
+  /**
+   * Elements
+   */
+  
+  &__item {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+  }
+
+  &__link {
+    display: block;
+    @include size(47px);
+
+    @include p-el(before) {
+
+    }
+
+    &_vk:before {
+      @include sprite($s-vk);
+    }
+
+    &_vk:hover:before {
+      @include sprite-position($s-vk-hover);
+    }
+
+    &_tw:before {
+      @include sprite($s-tw);
+    }
+
+    &_tw:hover:before {
+      @include sprite-position($s-tw-hover);
+    }
+
+    &_fb:before {
+      @include sprite($s-fb);
+    }
+
+    &_fb:hover:before {
+      @include sprite-position($s-fb-hover);
+    }
+
+    &_git:before {
+      @include sprite($s-git);
+    }
+
+    &_git:hover:before {
+      @include sprite-position($s-git-hover);
+    }
+
+  }
+
+}

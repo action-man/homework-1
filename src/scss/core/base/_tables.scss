@@ -1,0 +1,19 @@
+/*--------------------------------------------------*\
+  =Tables
+\*--------------------------------------------------*/
+
+table {
+  max-width: 100%;
+}
+
+th,
+td {
+  padding: 7px 12px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid get-color('secondary');
+}
+
+th {
+  font-family: $font-bold;
+}

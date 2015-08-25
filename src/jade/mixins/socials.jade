@@ -1,0 +1,5 @@
+mixin socials(items)
+  ul(class="socials")&attributes(attributes)
+    each title, social in items
+      li(class="socials__item")
+        a(class="socials__link socials__link_" + social, title=title)

@@ -1,0 +1,54 @@
+/*--------------------------------------------------*\
+  =Links
+\*--------------------------------------------------*/
+
+$link-color: get-color('primary');
+$link-color-hover: get-color('primary');
+
+$link-text-decoration: none;
+$link-text-decoration-hover: underline;
+
+$link-border: 0;
+$link-border-hover: 0;
+
+$link-pseudo-border: 1px dashed transparentize($link-color, 0.7);
+$link-pseudo-border-hover: 1px dashed transparent;
+
+
+
+a, .link {
+  @include transition(color 150ms ease);
+  text-decoration: $link-text-decoration;
+  color: $link-color;
+  cursor: pointer;
+  background-color: transparent;
+
+  @if $link-border != none {
+    border-bottom: $link-border;
+  }  
+
+  &:hover,
+  &:hover .link {
+    text-decoration: $link-text-decoration-hover;
+    color: $link-color-hover;
+
+    @if $link-border-hover != none {
+      border-bottom: $link-border-hover;
+    }
+
+  }
+
+}
+
+.link_pseudo {
+  text-decoration: none;
+  border-bottom: $link-pseudo-border;
+
+  &:hover,
+  a:hover &,
+  .link:hover & {
+    text-decoration: none;
+    border-bottom: $link-pseudo-border-hover;
+  }
+
+}

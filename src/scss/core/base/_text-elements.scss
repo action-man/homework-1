@@ -1,0 +1,74 @@
+/*--------------------------------------------------*\
+  =Text Elements
+\*--------------------------------------------------*/
+
+abbr[title],
+acronym[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+
+/**
+ * Remove `text-decoration` on links inside <abbr> elements, since there are
+ * already border styles on the <abbr> element.
+ */
+
+abbr a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+b, strong {
+  font-family: $font-bold;
+}
+
+del, s, strike {
+  text-decoration: line-through;
+}
+
+details {
+  cursor: pointer;
+}
+
+figcaption {
+  margin: .3em 0;
+  font-style: italic;
+}
+
+i, em {
+  font-style: italic;
+}
+
+mark {
+  background-color: yellow;
+  color: black;
+  text-decoration: none;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+small {
+  font-size: 80%;
+}
+
+u, ins {
+  text-decoration: underline;
+}

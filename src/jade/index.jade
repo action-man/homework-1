@@ -1,0 +1,92 @@
+extends ./extends/layout
+
+
+block title
+  title Главная страница
+
+
+block sidebar
+
+
+  // main nav
+  +nav(['Обо мне', 'Мои работы', 'Связаться со мной'], 0)(class="sidebar__item")
+
+
+  // contacts
+  div(class="contacts-mini sidebar__item")
+    div(class="contacts-mini__title") Контакты
+    ul(class="contacts-mini__list")
+
+      each value, key in {mailto: 'pochta@mail.ru', tel: "+79787245547", skype: 'ellfeich'}
+
+        li(class="contacts-mini__item contacts-mini__item_" + key)
+          a(href=key + ":" + value, class="contacts-mini__link")= value
+
+
+block content
+
+
+  // person details
+  +section('Обо мне')(class="content__section person-details")
+    div(class="person-details__content")
+
+
+      // side
+      div(class="person-details__side")
+        div(class="person-details__avatar")
+          img(src="images/photo.jpg", class="person-details__avatar-image", alt="Фотография", width="140", height="140")
+
+
+      //body
+      div(class="person-details__body")
+        dl(class="person-details__data")
+          dt(class="person-details__data-key") Меня зовут:
+          dd(class="person-details__data-value") Леонов Антон Олегович
+          dt(class="person-details__data-key") Мой возраст:
+          dd(class="person-details__data-value") 26 лет
+          dt(class="person-details__data-key") Мой город:
+          dd(class="person-details__data-value") Симферополь, Крым
+          dt(class="person-details__data-key") Моя специализация:
+          dd(class="person-details__data-value") Frontend
+          dt(class="person-details__data-key") Ключевые навыки:
+          dd(class="person-details__data-value")
+
+
+            // skills
+            ul(class="person-details__skills")
+
+              each item in ['html', 'css', 'javascript', 'gulp', 'git']
+
+                li(class="person-details__skills-item")= item
+
+
+  // experience
+  +section('Опыт работы')(class="content__section")
+
+    
+    // feature list
+    ul(class="feature-list")
+
+      li(class="feature-list__item feature-list__item_icon-bag")
+        div(class="feature-list__item-title") "ИП Боровицкий" - Продавец дисков
+        div(class="feature-list__item-text") Сентябрь 2005 - Август 2008
+
+      li(class="feature-list__item feature-list__item_icon-bag")
+        div(class="feature-list__item-title") "ООО Системы безопасности" - Системный администратор
+        div(class="feature-list__item-text") Июнь 2008 - Июль 2010
+
+
+  // education
+  +section('Образование')(class="content__section")
+
+
+    // feature list
+    ul(class="feature-list")
+
+      li(class="feature-list__item feature-list__item_icon-study")
+        div(class="feature-list__item-title") "ИП Боровицкий" - Продавец дисков
+        div(class="feature-list__item-text") Сентябрь 2005 - Август 2008
+
+      li(class="feature-list__item feature-list__item_icon-list")
+        div(class="feature-list__item-title") "ООО Системы безопасности" - Системный администратор
+        div(class="feature-list__item-text") Июнь 2008 - Июль 2010

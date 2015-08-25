@@ -1,0 +1,16 @@
+@function get-color(
+  $name: 'primary',
+  $variant: 'base'
+) {
+  $color: null;
+  
+  // Get the color spectrum
+  $color-spectrum: map-get($palette, $name);
+  
+  // Get the color variant
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  @return $color;
+}

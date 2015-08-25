@@ -1,0 +1,341 @@
+/*--------------------------------------------------*\
+  =Forms
+\*--------------------------------------------------*/
+
+
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+
+
+/**
+ * Common styles
+ */
+
+button,
+input,
+select,
+textarea,
+.input {
+  vertical-align: middle;
+  color: $color-text;
+  box-sizing: border-box;
+}
+
+.is-disabled,
+[disabled],
+.is-disabled *,
+[disabled] *,
+[readonly] {
+  cursor: default !important;
+}
+
+.is-disabled,
+[disabled],
+.disabled {
+  @include user-select(none);
+} 
+
+
+
+/**
+ * Fieldset
+ */
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: inherit;
+  color: #333;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+/**
+ * Checkbox/radio
+ */
+
+.control {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+
+  label {
+    display: inline-block;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  input {
+    margin: -.1em 5px 0 -20px;
+  }
+
+}
+
+
+
+/**
+ * Inputs
+ */
+
+select,
+textarea,
+.input {
+  @include appearance(none); 
+  width: 100%;
+  border: 1px solid white;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 5px 10px;
+  height: 32px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: none;
+  @include transition(color 150ms ease, border-color 150ms ease);
+
+  &[disabled] {
+    opacity: .5;
+  }
+
+  &.is-error {
+    border-color: get-color('danger');
+  }
+
+  &:focus {
+    //border-color: $color-accent;
+  }
+
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: none;
+  height: $line-height-computed * 4 + 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+select {
+
+  &[multiple],
+  &[size] {
+    //height: auto;
+    height: 32px;
+  }
+
+  optgroup {
+    font-size: inherit;
+    font-style: inherit;
+    font-family: inherit;
+
+    option {
+      padding-left: 15px;
+    }
+
+  }
+
+} 
+
+
+
+/**
+ * Placeholders
+ */
+
+input,
+textarea {
+
+  @include placeholder {
+    font-family: $font-family-base;
+    color: #888;
+    opacity: 1;
+  }
+
+}
+
+
+
+/**
+ * Form
+ */
+
+.form {
+
+  &__label {
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  &__group {
+    margin-bottom: 15px;
+  }
+
+  &__actions {
+    margin-top: 20px;
+  }
+
+  &__err {
+    color: get-color('danger');
+    margin-top: 2px;
+    font-size: $font-size-base;
+  }
+
+}

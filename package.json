@@ -1,7 +1,7 @@
 {
-  "name": "frontend-boilerplate",
+  "name": "Homework-1",
   "version": "1.0.0",
-  "description": "Boilerplate for quick start of a new project",
+  "description": "Portfolio Site",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -10,6 +10,7 @@
     "gulp-cached": "^1.0.2",
     "gulp-concat": "^2.5.0",
     "gulp-filter": "^2.0.2",
+    "gulp-jade": "^1.1.0",
     "gulp-minify-css": "^0.4.5",
     "gulp-rename": "^1.2.0",
     "gulp-rigger": "^0.5.8",
@@ -18,11 +19,6 @@
     "gulp-util": "^3.0.3",
     "gulp.spritesmith": "^3.1.0"
   },
-  "keywords": [
-    "boilerplate",
-    "frontend",
-    "gulp"
-  ],
   "author": "Toxa",
   "license": "MIT"
 }

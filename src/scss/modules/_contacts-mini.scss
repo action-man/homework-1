@@ -1,0 +1,79 @@
+/*--------------------------------------------------*\
+  =Contacts Mini
+\*--------------------------------------------------*/
+
+.contacts-mini {
+  border-radius: $border-radius-base;
+  overflow: hidden;
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__title {
+    font-size: 21px;
+    font-family: $font-book;
+    color: white;
+    padding: 8px 20px;
+    background-color: get-color('primary', 'darker');
+  }
+
+  &__list {
+    @extend %reset-list;
+  }
+
+  &__item {
+    padding: 8px 40px;
+    font-size: 17px;
+    background-color: get-color('primary', 'darker');
+
+    &_mailto {
+      background-color: get-color('primary', 'dark');
+
+      .contacts-mini__link:before {
+        @include sprite($s-mail);
+        top: 3px;
+      }
+
+    }
+
+    &_tel {
+      background-color: get-color('primary');
+
+      .contacts-mini__link:before {
+        @include sprite($s-phone);
+      }
+
+    }
+
+    &_skype {
+      background-color: get-color('primary', 'light');
+
+      .contacts-mini__link:before {
+        @include sprite($s-skype);
+      }
+
+    }
+
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    color: white;
+    font-family: $font-book;
+
+    @include p-el(before) {
+      left: 0;
+    }
+
+    &:hover {
+      color: white;
+    }
+
+  }
+
+}

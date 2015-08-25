@@ -1,0 +1,12 @@
+/*--------------------------------------------------*\
+  =Auth Trigger
+\*--------------------------------------------------*/
+
+.auth-trigger {
+  @include sprite($s-lock-close);
+
+  &:hover {
+    @include sprite-position($s-lock-open);
+  }
+
+}

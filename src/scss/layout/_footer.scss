@@ -1,0 +1,56 @@
+/*--------------------------------------------------*\
+  =Footer
+\*--------------------------------------------------*/
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  padding-top: 3px;
+  background-color: get-color('secondary', 'light');
+
+  @include p-el(before) {
+    @include size(100% 3px);
+    @include linear-gradient(to right, #e7eff3 0%, #1d677b 50%, #e7eff3 100%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__inner {
+    position: relative;
+    width: $site-width;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__auth,
+  &__copyright {
+    position: absolute;
+  }
+
+  &__auth {
+    left: 40px;
+    top: 50%;
+    margin-top: -16px;
+  }
+
+  &__copyright {
+    @include size(600px 100%);
+    top: 0;
+    left: 50%;
+    margin-left: -300px;
+    text-align: center;
+    line-height: 77px;
+  }
+
+}

@@ -1,0 +1,36 @@
+include ../mixins/mixins
+
+
+doctype html
+html(lang="ru")
+
+
+  include ../includes/head
+
+
+  body
+    div(class="wrapper")
+
+
+      include ../includes/header
+
+
+      // main
+      div(class="main")
+
+
+        // sidebar
+        aside(class="sidebar")
+
+
+          block sidebar
+
+
+        // content
+        main(class="content")
+
+
+          block content
+
+
+      include ../includes/footer

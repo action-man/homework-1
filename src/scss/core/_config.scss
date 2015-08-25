@@ -1,0 +1,49 @@
+// Palette
+$palette: (
+  'primary': (
+    'base': #48cbe8,
+    'light': #51daf8,
+    'lighter': #edf8fc,
+    'dark': #41b9d4,
+    'darker': #3ba8c0
+  ),
+  'secondary': (
+    'base': #959aa8,
+    'light': #eff3f7,
+    'dark': #58697a
+  ),
+  'danger': (
+    'base': #f97e76,
+    'light': #fdd8d6
+  ),
+  'success': (
+    'base': #49bb7b,
+    'light': #c3e9d4
+  )
+);
+
+
+
+// Fonts
+$font-regular : 'fira_sanslight';
+$font-italic  : 'fira_sanslight_italic';
+$font-medium  : 'fira_sansmedium';
+$font-book    : 'fira_sansbook';
+$font-bold    : 'fira_sansmedium';
+
+
+
+// Scaffolding
+$color-body-background : #fbfcfd;
+$color-text            : #4a545d;
+$selection-color       : #222;
+$selection-bg          : #b3d4fc;
+$font-family-base      : $font-regular;
+$font-size-base        : 15px;
+$line-height-base      : 20/15;
+$line-height-computed  : $font-size-base * $line-height-base;
+$site-width            : 980px;
+$site-padding          : 20px;
+$border-radius-base    : 4px;
+// $site-min-width        : 980px;
+// $site-max-width        : 1220px;

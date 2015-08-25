@@ -1,0 +1,9 @@
+/*--------------------------------------------------*\
+  =Selection
+\*--------------------------------------------------*/
+
+@include selection {
+  color: $selection-color;
+  background-color: $selection-bg;
+  text-shadow: none;
+}

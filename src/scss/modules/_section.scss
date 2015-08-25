@@ -1,0 +1,28 @@
+/*--------------------------------------------------*\
+  =Section
+\*--------------------------------------------------*/
+
+.section {
+  border-radius: $border-radius-base;
+  background-color: get-color('secondary', 'light');
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__title {
+    display: inline-block;
+    border-bottom: 2px solid get-color('primary', 'darker');
+    padding: 12px 20px;
+    font-size: 27px;
+    font-family: $font-book;
+    color: get-color('primary', 'darker');
+  }
+
+  &__body {
+    padding: 20px 40px 45px 55px;
+  }
+
+}

@@ -1,0 +1,19 @@
+/*--------------------------------------------------*\
+  =Main Logo
+\*--------------------------------------------------*/
+
+.main-logo {
+  display: block;
+  @extend %reset-link-border;
+
+
+
+  /**
+   * Elements
+   */
+
+  &__image {
+    display: block;
+  }
+  
+}

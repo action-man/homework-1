@@ -1,0 +1,62 @@
+/* ========================================================================== *\
+   =Code
+\* ========================================================================== */
+
+code,
+kbd,
+pre,
+samp,
+var {
+  font-size: 90%;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+code,
+kbd,
+samp {
+  padding: 3px 6px;
+  display: inline-block;
+  line-height: 1;
+  border-radius: 2px;
+}
+
+code {
+  background: #f4f4f4;
+  border: 1px solid #d4d4d4;
+
+  pre & {
+    font-size: 100%;
+    border: none;
+    padding: 0;
+    background: none;
+  }
+
+}
+
+kbd {
+  background: #333;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+pre {
+  //margin-top: @base-line;
+  font-size: 100%;
+  line-height: 1.5;
+  color: inherit;
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+  tab-size: 4;
+  margin-bottom: $line-height-computed;
+}
+
+samp {
+  background: #d3e3fb;
+  border: 1px solid #b2cef8;
+}
+
+var {
+  color: rgba(0, 0, 0, 0.5);
+}
