@@ -8,8 +8,8 @@ $link-color-hover: get-color('primary');
 $link-text-decoration: none;
 $link-text-decoration-hover: underline;
 
-$link-border: 0;
-$link-border-hover: 0;
+$link-border: none;
+$link-border-hover: none;
 
 $link-pseudo-border: 1px dashed transparentize($link-color, 0.7);
 $link-pseudo-border-hover: 1px dashed transparent;

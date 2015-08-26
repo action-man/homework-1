@@ -1,0 +1,91 @@
+extends ./extends/layout
+
+
+block title
+  title Проекты
+
+
+block sidebar
+
+
+  // main nav
+  +nav(['Обо мне', 'Мои работы', 'Связаться со мной'], 1)(class="sidebar__item")
+
+
+  // contacts
+  div(class="contacts-mini sidebar__item")
+    div(class="contacts-mini__title") Контакты
+    ul(class="contacts-mini__list")
+
+      each value, key in {mailto: 'pochta@mail.ru', tel: "+79787245547", skype: 'ellfeich'}
+
+        li(class="contacts-mini__item contacts-mini__item_" + key)
+          a(href=key + ":" + value, class="contacts-mini__link")= value
+
+
+block content
+
+
+  // projects
+  +section('Мои работы')(class="content__section project-list")
+    ul(class="project-list__list")
+
+
+      // item
+      li(class="project-list__item")
+        a(href="/", class="project-list__item-image-box")
+          img(src="images/projects/1.jpg", alt="Проект", class="project-list__item-image")
+          div(class="project-list__item-title-wrap")
+            div(class="project-list__item-title") Название проекта
+        div(class="project-list__item-url")
+          a(href="/", class="project-list__item-url-link", target="_blank") site.ru
+        div(class="project-list__item-desc") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+      // item
+      li(class="project-list__item")
+        a(href="/", class="project-list__item-image-box")
+          img(src="images/projects/1.jpg", alt="Проект", class="project-list__item-image")
+          div(class="project-list__item-title-wrap")
+            div(class="project-list__item-title") Название проекта
+        div(class="project-list__item-url")
+          a(href="/", class="project-list__item-url-link", target="_blank") site.ru
+        div(class="project-list__item-desc") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+      // item
+      li(class="project-list__item")
+        a(href="/", class="project-list__item-image-box")
+          img(src="images/projects/1.jpg", alt="Проект", class="project-list__item-image")
+          div(class="project-list__item-title-wrap")
+            div(class="project-list__item-title") Название проекта
+        div(class="project-list__item-url")
+          a(href="/", class="project-list__item-url-link", target="_blank") site.ru
+        div(class="project-list__item-desc") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+      // item
+      li(class="project-list__item")
+        a(href="/", class="project-list__item-image-box")
+          img(src="images/projects/1.jpg", alt="Проект", class="project-list__item-image")
+          div(class="project-list__item-title-wrap")
+            div(class="project-list__item-title") Название проекта
+        div(class="project-list__item-url")
+          a(href="/", class="project-list__item-url-link", target="_blank") site.ru
+        div(class="project-list__item-desc") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+      // item
+      li(class="project-list__item")
+        a(href="/", class="project-list__item-image-box")
+          img(src="images/projects/1.jpg", alt="Проект", class="project-list__item-image")
+          div(class="project-list__item-title-wrap")
+            div(class="project-list__item-title") Название проекта
+        div(class="project-list__item-url")
+          a(href="/", class="project-list__item-url-link", target="_blank") site.ru
+        div(class="project-list__item-desc") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+      // item
+      li(class="project-list__item")
+        a(href="/", class="project-list__item-add") Добавить проект

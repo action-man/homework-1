@@ -43,6 +43,11 @@
       background-color: get-color('primary', 'darker');
       color: white;
       font-size: 23px;
+
+      &:before {
+        display: none;
+      }
+
     }
 
   }

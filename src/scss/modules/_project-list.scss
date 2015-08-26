@@ -1,0 +1,144 @@
+/*--------------------------------------------------*\
+  =Project List
+\*--------------------------------------------------*/
+
+.project-list {
+
+
+
+  /**
+   * Elements
+   */
+
+  .section__body {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+  }
+
+  &__list {
+    @extend %reset-list;
+    margin-left: -30px;
+    margin-top: -40px;
+    font-size: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 215px;
+    font-size: $font-size-base;
+    padding-left: 30px;
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  &__item-image-box {
+    display: block;
+    position: relative;
+    @include size(100% 131px);
+    border: 2px solid get-color('primary', 'darker');
+    border-radius: $border-radius-base;
+    overflow: hidden;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+
+      .project-list__item-title-wrap {
+        opacity: 1;
+      }
+
+      .project-list__item-title {
+        @include transform(scale(1));
+      }
+
+    }
+
+  }
+
+  &__item-image {
+    max-width: 100%;
+  }
+
+  &__item-title-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(1, 108, 164, .75);
+    opacity: 0;
+    @include transition(opacity 150ms ease);
+
+    @include p-el(before) {
+      position: static;
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      font-size: 0;
+    }
+
+  }
+
+  &__item-title {
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: $border-radius-base;
+    font-size: 12px;
+    font-family: $font-book;
+    color: white;
+    padding: 1px 8px;
+    max-width: 90%;
+    vertical-align: middle;
+    @include transform(scale(0));
+    @include transition(transform 250ms ease);
+  }
+
+  &__item-overlay {
+
+  }
+
+  &__item-url {
+    margin: 5px 0;
+  }
+
+  &__item-url-link {
+    font-size: 13px;
+    font-family: $font-italic;
+  }
+
+  &__item-desc {
+    font-size: 15px;
+  }
+
+  &__item-add {
+    position: relative;
+    display: block;
+    border: 1px dashed get-color('primary', 'darker');
+    border-radius: $border-radius-base;
+    overflow: hidden;
+    background-color: get-color('primary', 'lighter');
+    height: 131px;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 13px;
+    color: get-color('primary', 'darker');
+    @include transition(background-color 150ms ease);
+
+    @include p-el(before) {
+      @include sprite($s-image-pictogram);
+      left: 50%;
+      top: 35px;
+      margin-left: -16px;
+    }
+
+    &:hover {
+      background-color: darken(get-color('primary', 'lighter'), 3%);
+      text-decoration: none;
+      color: get-color('primary', 'darker');
+    }
+
+  }
+
+}
