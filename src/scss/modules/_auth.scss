@@ -1,0 +1,42 @@
+/*--------------------------------------------------*\
+  =Auth
+\*--------------------------------------------------*/
+
+.auth  {
+  display: inline-block;
+  text-align: center;
+  width: 590px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+
+
+
+  /**
+   * Elements
+   */
+  
+  .input {
+    text-align: left;
+  }
+
+  &__header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 40px;
+  }
+
+  &__body {
+    padding: 25px 80px;
+  }
+
+  &__actions {
+    margin-top: 30px;
+  }
+
+  &__submit {
+    width: 220px;
+  }
+
+}

@@ -3,8 +3,9 @@ footer(class="footer")
   div(class="footer__inner")
 
 
-    // auth
-    a(class="footer__auth auth-trigger", href="/", title="Вход")
+    if !isAuthPage
+      // auth
+      a(class="footer__auth auth-trigger", href="/", title="Вход")
 
 
     // copyright

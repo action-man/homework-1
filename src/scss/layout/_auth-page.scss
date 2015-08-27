@@ -1,0 +1,23 @@
+/*--------------------------------------------------*\
+  =Auth Page
+\*--------------------------------------------------*/
+
+.auth-page {
+  display: table;
+  @include size(100%);
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__inner {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 100px;
+    padding-top: 20px;
+  }
+
+}

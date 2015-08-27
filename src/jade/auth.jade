@@ -1,0 +1,21 @@
+extends ./extends/layout_auth
+
+
+block title
+  title Авторизация
+
+
+block content
+  div(class="auth area")
+    div(class="auth__header area__header")
+      div(class="auth__title area__title") Авторизация
+    div(class="auth__body area__body")
+      form(action="/", class="form")
+        +form-group
+          +label(for="auth-login", class="form__label_big") Логин
+          +input(id="auth-login", placeholder="Введите логин", class="input_big")
+        +form-group
+          +label(for="auth-password", class="form__label_big") Пароль
+          +input(id="auth-password", placeholder="Введите пароль", class="input_big")
+        +form-actions(class="auth__actions")
+          button(type="submit", class="auth__submit btn btn_primary btn_big") Войти
