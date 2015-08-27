@@ -9,7 +9,8 @@ block sidebar
 
 
   // main nav
-  +nav(['Обо мне', 'Мои работы', 'Связаться со мной'], 2)(class="sidebar__item")
+  - var navData = [{text: 'Обо мне', url: 'index.html'},  {text: 'Мои работы', url: 'projects.html'},  {text: 'Связаться со мной', url: 'feedback.html'}]
+  +nav(navData, 2)(class="sidebar__item")
 
 
   // contacts

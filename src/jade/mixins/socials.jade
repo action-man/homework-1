@@ -1,5 +1,5 @@
 mixin socials(items)
   ul(class="socials")&attributes(attributes)
-    each title, social in items
+    each item, idx in items
       li(class="socials__item")
-        a(class="socials__link socials__link_" + social, title=title)
+        a(href=item.url ? item.url : "#", class="socials__link socials__link_" + item.alias, title=item.title, target="_blank")

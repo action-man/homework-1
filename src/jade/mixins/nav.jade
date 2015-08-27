@@ -2,6 +2,6 @@ mixin nav(items, currentIndex)
   nav(class="nav")&attributes(attributes)
     each item, idx in items
       if idx == currentIndex
-        span(class="nav__link is-current")= item
+        span(class="nav__link is-current")= item.text
       else
-        a(href="#", class="nav__link")= item
+        a(href=item.url, class="nav__link")= item.text
