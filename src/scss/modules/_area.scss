@@ -1,0 +1,33 @@
+/*--------------------------------------------------*\
+  =Area
+\*--------------------------------------------------*/
+
+.area {
+
+
+
+  /**
+   * Elements
+   */
+  
+  &__header {
+    background-color: get-color('primary');
+    border-bottom: 17px solid get-color('primary', 'light');
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: $border-radius-base $border-radius-base 0 0;
+  }
+
+  &__title {
+    color: white;
+    font-size: 27px;
+    font-family: $font-book;
+  }
+
+  &__body {
+    padding: 40px;
+    background-color: get-color('secondary', 'light');
+    border-radius: 0 0 $border-radius-base $border-radius-base;
+  }
+
+}

@@ -28,7 +28,7 @@
 @import 'layout/_header';
 @import 'layout/_footer';
 
-
+@import 'modules/_buttons';
 @import 'modules/_main-logo';
 @import 'modules/_copyright';
 @import 'modules/_auth-trigger';
@@ -36,8 +36,10 @@
 @import 'modules/_section';
 @import 'modules/_socials';
 @import 'modules/_feature-list';
+@import 'modules/_area';
 
 
 @import 'modules/_person-details';
 @import 'modules/_contacts-mini';
 @import 'modules/_project-list';
+@import 'modules/_feedback';

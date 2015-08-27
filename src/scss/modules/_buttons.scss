@@ -1,0 +1,111 @@
+/*--------------------------------------------------*\
+  =Buttons
+\*--------------------------------------------------*/
+
+.btn {
+  @include transition(
+    background-color 200ms,
+    border 150ms
+  );
+
+  @include user-select(none);
+  display: inline-block;
+  position: relative;
+  font-family: $font-book;
+  font-size: 19px;
+  line-height: $line-height-base;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  margin: 0;
+  padding: 2px 20px;
+  cursor: pointer;
+  border-radius: $border-radius-base;
+  background-color: transparent;
+  overflow: visible;
+  border: 0;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  &[disabled],
+  &.is-disabled {
+    opacity: .6;
+  }
+
+
+
+  /**
+   * Modifiers
+   */
+
+  &_expand {
+    width: 100%;
+  }
+
+  &_big {
+    padding: 11px 20px;
+  }
+  
+  &_primary {
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid get-color('primary', 'darker');
+
+    &,
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus,
+    &[disabled]:active,
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:focus,
+    &.is-disabled:active {
+      color: white;
+      background-color: get-color('primary');
+    }
+
+    &:hover,
+    &:focus {
+      color: white;
+    }
+
+    &:active {
+      border-bottom: 2px solid transparent;
+      border-top: 2px solid get-color('primary', 'darker');
+    }
+
+  }
+
+  &_secondary {
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid #687b8f;
+
+    &,
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus,
+    &[disabled]:active,
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:focus,
+    &.is-disabled:active {
+      color: white;
+      background-color: #849db5;
+    }
+
+    &:hover,
+    &:focus {
+      color: white;
+    }
+
+    &:active {
+      border-bottom: 2px solid transparent;
+      border-top: 2px solid #687b8f;
+    }
+
+  }
+
+}

@@ -1,0 +1,73 @@
+extends ./extends/layout
+
+
+block title
+  title Обратная связь
+
+
+block sidebar
+
+
+  // main nav
+  +nav(['Обо мне', 'Мои работы', 'Связаться со мной'], 2)(class="sidebar__item")
+
+
+  // contacts
+  div(class="contacts-mini sidebar__item")
+    div(class="contacts-mini__title") Контакты
+    ul(class="contacts-mini__list")
+
+      each value, key in {mailto: 'pochta@mail.ru', tel: "+79787245547", skype: 'ellfeich'}
+
+        li(class="contacts-mini__item contacts-mini__item_" + key)
+          a(href=key + ":" + value, class="contacts-mini__link")= value
+
+
+block content
+
+
+  div(class="area")
+    div(class="area__header")
+      div(class="area__title") У вас интересный проект? Напишите мне
+    div(class="area__body")
+
+
+      // feedback
+      form(action="/", class="form feedback")
+
+
+        // group
+        +form-group
+          +form-row
+            +form-col(50)
+              +label(for="feedback-name") Имя
+              +input(placeholder="Как к Вам обращаться", id="feedback-name")
+            +form-col(50)
+              +label(for="feedback-email") Email
+              +input(type="email", placeholder="Куда мне писать", id="feedback-email")
+
+
+        // group
+        +form-group
+          +label(for="feedback-comment") Сообщение
+          textarea(placeholder="Кратко в чём суть", class="feedback__comment", id="feedback-comment")
+
+
+        // group
+        +form-group
+          +label(for="feedback-captcha") Введите код, указанный на картинке
+          +form-row(class="feedback__captcha-row")
+            +form-col(50)
+              div(class="feedback__captcha")
+                img(src="images/captcha.jpg", alt="Каптча", width="171", height="63")
+            +form-col(50)
+              +input(placeholder="Введите код", class="input_small", id="feedback-captcha")
+
+
+        // action
+        div(class="form__actions")
+          +form-row
+            +form-col(50)
+              button(type="submit", class="btn btn_primary") Отправить
+            +form-col(50)(class="feedback__reset")
+              button(type="reset", class="btn btn_secondary") Очистить

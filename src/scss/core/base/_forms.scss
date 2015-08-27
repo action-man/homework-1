@@ -163,8 +163,7 @@ select,
 textarea,
 .input {
   vertical-align: middle;
-  color: $color-text;
-  box-sizing: border-box;
+  color: get-color('primary');
 }
 
 .is-disabled,
@@ -239,13 +238,13 @@ textarea,
 .input {
   @include appearance(none); 
   width: 100%;
-  border: 1px solid white;
-  font-size: 15px;
+  border: 1px solid get-color('primary');
+  font-size: 13px;
   line-height: 20px;
-  padding: 5px 10px;
-  height: 32px;
+  padding: 10px;
+  height: 40px;
   background: white;
-  border-radius: 5px;
+  border-radius: $border-radius-base;
   box-shadow: none;
   @include transition(color 150ms ease, border-color 150ms ease);
 
@@ -258,9 +257,15 @@ textarea,
   }
 
   &:focus {
-    //border-color: $color-accent;
+    border-color: get-color('primary', 'darker');
   }
 
+}
+
+.input_small {
+  height: 32px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 textarea {
@@ -268,8 +273,6 @@ textarea {
   vertical-align: top;
   resize: none;
   height: $line-height-computed * 4 + 20px;
-  padding-top: 8px;
-  padding-bottom: 8px;
 }
 
 select {
@@ -304,7 +307,7 @@ textarea {
 
   @include placeholder {
     font-family: $font-family-base;
-    color: #888;
+    color: get-color('primary');
     opacity: 1;
   }
 
@@ -319,23 +322,38 @@ textarea {
 .form {
 
   &__label {
-    font-size: 14px;
+    font-size: 17px;
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    color: get-color('secondary');
   }
 
   &__group {
     margin-bottom: 15px;
   }
 
-  &__actions {
-    margin-top: 20px;
+  &__row {
+    font-size: 0;
+    margin-left: -20px;
+    margin-top: -20px;
   }
 
-  &__err {
-    color: get-color('danger');
-    margin-top: 2px;
+  &__col {
+    display: inline-block;
+    vertical-align: top;
     font-size: $font-size-base;
+    padding-left: 20px;
+    margin-top: 20px;
+
+    &_25 { width: 24.9999%; }
+    &_33 { width: 33.3333%; }
+    &_50 { width: 49.9999%; }
+    &_75 { width: 74.9999%; }
+
+  }
+
+  &__actions {
+    margin-top: 20px;
   }
 
 }
