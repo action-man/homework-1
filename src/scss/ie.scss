@@ -1,0 +1,28 @@
+.ie8, .ie9 {
+
+  .placeholdersjs {
+    color: #48cbe8 !important;
+  }
+
+}
+
+
+.ie8 {
+
+  .project-list {
+
+    &__item-title-wrap {
+      display: none;
+    }
+
+    &__item-image-box:hover {
+
+      .project-list__item-title-wrap {
+        display: block;
+      }
+
+    }
+
+  }
+
+}

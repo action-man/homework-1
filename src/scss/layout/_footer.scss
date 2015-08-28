@@ -13,7 +13,7 @@
 
   @include p-el(before) {
     @include size(100% 3px);
-    @include linear-gradient(to right, #e7eff3 0%, #1d677b 50%, #e7eff3 100%);
+    @include linear-gradient(to right, #e7eff3 0%, #1d677b 50%, #e7eff3 100%, $fallback: #adc8d0);
     position: absolute;
     left: 0;
     right: 0;

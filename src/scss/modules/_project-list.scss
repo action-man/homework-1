@@ -67,7 +67,8 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(1, 108, 164, .75);
+    background: url('../images/bg_blue_op75.png') repeat;
+    background: rgba(1, 108, 164, .75);
     opacity: 0;
     @include transition(opacity 150ms ease);
 

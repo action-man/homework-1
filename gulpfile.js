@@ -31,7 +31,7 @@ var paths = {
   // пути, по которым находятся исходники
   src: {
     templates   : ['src/jade/*.jade'],
-    style  : 'src/scss/main.scss',
+    style  : ['src/scss/main.scss', 'src/scss/ie.scss'],
     js     : ['src/js/libs.js', 'src/js/vendor.js', 'src/js/main.js', 'src/js/polyfills/*.*'],
     img    : ['src/images/**/*.*', '!src/images/sprite/*.*'],
     sprite : 'src/images/sprite/*.*',
