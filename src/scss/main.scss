@@ -21,6 +21,9 @@
 @import 'core/base/_forms';
 
 
+@import 'vendor/_fancybox';
+
+
 @import 'layout/_wrapper';
 @import 'layout/_main';
 @import 'layout/_sidebar';
@@ -39,6 +42,7 @@
 @import 'modules/_socials';
 @import 'modules/_feature-list';
 @import 'modules/_area';
+@import 'modules/_modal';
 
 
 @import 'modules/_person-details';

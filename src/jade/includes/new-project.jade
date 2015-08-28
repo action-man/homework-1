@@ -1,0 +1,20 @@
+// new project 
+div(class="new-project modal", id="new-project-modal")
+  div(class="modal__header")
+    div(class="modal__title") Добавление проекта
+  div(class="modal__body")
+    form(action="/", class="form")
+      +form-group
+        +label(for="new-project-name") Название проекта
+        +input(id="new-project-name", placeholder="Введите название")
+      +form-group
+        +label(for="new-project-image") Картинка проекта
+        +input(id="new-project-image", placeholder="Загрузите изображение", type="file")
+      +form-group
+        +label(for="new-project-url") URL проекта
+        +input(id="new-project-url", placeholder="Добавьте ссылку", type="url")
+      +form-group
+        +label(for="new-project-desc") Описание
+        textarea(id="new-project-desc", placeholder="Пара слов о Вашем проекте")
+      +form-actions(class="u-text-center")
+        button(type="submit", class="btn btn_primary") Добавить

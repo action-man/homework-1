@@ -1,3 +1,6 @@
+- var page = 'projects'
+
+
 extends ./extends/layout
 
 
@@ -13,15 +16,7 @@ block sidebar
   +nav(navData, 1)(class="sidebar__item")
 
 
-  // contacts
-  div(class="contacts-mini sidebar__item")
-    div(class="contacts-mini__title") Контакты
-    ul(class="contacts-mini__list")
-
-      each value, key in {mailto: 'pochta@mail.ru', tel: "+79787245547", skype: 'ellfeich'}
-
-        li(class="contacts-mini__item contacts-mini__item_" + key)
-          a(href=key + ":" + value, class="contacts-mini__link")= value
+  include ./includes/contacts
 
 
 block content
@@ -37,7 +32,7 @@ block content
         a(href="/", class="project-list__item-image-box")
           img(src="images/projects/1.jpg", alt="Проект", class="project-list__item-image")
           div(class="project-list__item-title-wrap")
-            div(class="project-list__item-title") Название проекта
+            div(class="project-list__item-title") Подробнее
         div(class="project-list__item-url")
           a(href="/", class="project-list__item-url-link", target="_blank") site.ru
         div(class="project-list__item-desc") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -48,7 +43,7 @@ block content
         a(href="/", class="project-list__item-image-box")
           img(src="images/projects/1.jpg", alt="Проект", class="project-list__item-image")
           div(class="project-list__item-title-wrap")
-            div(class="project-list__item-title") Название проекта
+            div(class="project-list__item-title") Подробнее
         div(class="project-list__item-url")
           a(href="/", class="project-list__item-url-link", target="_blank") site.ru
         div(class="project-list__item-desc") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -59,7 +54,7 @@ block content
         a(href="/", class="project-list__item-image-box")
           img(src="images/projects/1.jpg", alt="Проект", class="project-list__item-image")
           div(class="project-list__item-title-wrap")
-            div(class="project-list__item-title") Название проекта
+            div(class="project-list__item-title") Подробнее
         div(class="project-list__item-url")
           a(href="/", class="project-list__item-url-link", target="_blank") site.ru
         div(class="project-list__item-desc") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -70,7 +65,7 @@ block content
         a(href="/", class="project-list__item-image-box")
           img(src="images/projects/1.jpg", alt="Проект", class="project-list__item-image")
           div(class="project-list__item-title-wrap")
-            div(class="project-list__item-title") Название проекта
+            div(class="project-list__item-title") Подробнее
         div(class="project-list__item-url")
           a(href="/", class="project-list__item-url-link", target="_blank") site.ru
         div(class="project-list__item-desc") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -81,7 +76,7 @@ block content
         a(href="/", class="project-list__item-image-box")
           img(src="images/projects/1.jpg", alt="Проект", class="project-list__item-image")
           div(class="project-list__item-title-wrap")
-            div(class="project-list__item-title") Название проекта
+            div(class="project-list__item-title") Подробнее
         div(class="project-list__item-url")
           a(href="/", class="project-list__item-url-link", target="_blank") site.ru
         div(class="project-list__item-desc") Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -89,4 +84,8 @@ block content
 
       // item
       li(class="project-list__item")
-        a(href="/", class="project-list__item-add") Добавить проект
+        a(href="#new-project-modal", class="project-list__item-add js-fancy-inline {width: 360}") Добавить проект
+
+
+
+  include ./includes/new-project

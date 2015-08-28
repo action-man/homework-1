@@ -1,0 +1,9 @@
+// contacts
+div(class="contacts-mini sidebar__item")
+  div(class="contacts-mini__title") Контакты
+  ul(class="contacts-mini__list")
+
+    each value, key in {mailto: 'pochta@mail.ru', tel: "+79787245547", skype: 'ellfeich'}
+
+      li(class="contacts-mini__item contacts-mini__item_" + key)
+        a(href=key + ":" + value, class="contacts-mini__link")= value
