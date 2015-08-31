@@ -26,7 +26,7 @@ block content
 
 
       // feedback
-      form(action="/", class="form feedback")
+      form(action="/", class="form feedback js-validator")
 
 
         // group
@@ -34,16 +34,16 @@ block content
           +form-row
             +form-col(50)
               +label(for="feedback-name") Имя
-              +input(placeholder="Как к Вам обращаться", id="feedback-name")
+              +input(placeholder="Как к Вам обращаться", id="feedback-name", required="true", data-tooltip-content="Вы не ввели имя")
             +form-col(50)
               +label(for="feedback-email") Email
-              +input(type="email", placeholder="Куда мне писать", id="feedback-email")
+              +input(type="email", placeholder="Куда мне писать", id="feedback-email", required="true", data-tooltip-content="Вы не ввели email", data-tooltip-position="right")
 
 
         // group
         +form-group
           +label(for="feedback-comment") Сообщение
-          textarea(placeholder="Кратко в чём суть", class="feedback__comment", id="feedback-comment")
+          textarea(placeholder="Кратко в чём суть", class="feedback__comment", id="feedback-comment", required="true", data-tooltip-content="Ваш вопрос")
 
 
         // group
@@ -54,7 +54,7 @@ block content
               div(class="feedback__captcha")
                 img(src="images/captcha.jpg", alt="Каптча", width="171", height="63")
             +form-col(50)
-              +input(placeholder="Введите код", class="input_small", id="feedback-captcha")
+              +input(placeholder="Введите код", class="input_small", id="feedback-captcha", required="true", data-tooltip-content="Вы не ввели код", data-tooltip-position="right")
 
 
         // action

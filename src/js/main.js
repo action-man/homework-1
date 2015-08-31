@@ -18,15 +18,30 @@ $(document).ready(function() {
   $.fancybox.helpers.title.defaults.type = 'inside';
   $.fancybox.helpers.title.defaults.position = 'top';
 
-  /*if (isIE8) {
-    $.fancybox.defaults.openEffect = 'none';
-    $.fancybox.defaults.closeEffect = 'none';
-    $.fancybox.helpers.overlay.defaults.speedOut = 0;
-  };*/
-
-  $('.js-fancy-inline').fancybox();
-
   /*-------- /[FANCYBOX] --------*/
+
+
+
+
+
+
+  if ($('.js-file-input').length) {
+    $('.js-file-input').each(function() {
+      fileInput.init($(this));
+    });
+  }
+
+
+  if ($('.js-validator').length) {
+    $('.js-validator').each(function() {
+      validator.init($(this));
+    });
+  }
+
+
+  if ($('.js-projects').length) {
+    newProject.init($('.js-projects'));
+  }
 
 
 

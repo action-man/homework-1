@@ -3,18 +3,22 @@ div(class="new-project modal", id="new-project-modal")
   div(class="modal__header")
     div(class="modal__title") Добавление проекта
   div(class="modal__body")
-    form(action="/", class="form")
+    form(action="/", class="form js-validator")
       +form-group
         +label(for="new-project-name") Название проекта
-        +input(id="new-project-name", placeholder="Введите название")
+        +input(id="new-project-name", placeholder="Введите название", required="true", data-tooltip-content="введите название")
       +form-group
         +label(for="new-project-image") Картинка проекта
-        +input(id="new-project-image", placeholder="Загрузите изображение", type="file")
+        label(class="file-input js-file-input")
+          span(class="file-input__btn")
+          div(class="file-input__fields")
+            +input(type="file", class="file-input__orig-field", required="true", data-tooltip-content="изображение", placeholder="Загрузите изображение")
+            div(class="input file-input__dummy-field")
       +form-group
         +label(for="new-project-url") URL проекта
-        +input(id="new-project-url", placeholder="Добавьте ссылку", type="url")
+        +input(id="new-project-url", placeholder="Добавьте ссылку", type="url", required="true", data-tooltip-content="ссылка на проект")
       +form-group
         +label(for="new-project-desc") Описание
-        textarea(id="new-project-desc", placeholder="Пара слов о Вашем проекте")
+        textarea(id="new-project-desc", placeholder="Пара слов о Вашем проекте", required="true", data-tooltip-content="описание проекта")
       +form-actions(class="u-text-center")
         button(type="submit", class="btn btn_primary") Добавить

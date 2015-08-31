@@ -32,7 +32,7 @@ var paths = {
   src: {
     templates   : ['src/jade/*.jade'],
     style  : ['src/scss/main.scss', 'src/scss/ie.scss'],
-    js     : ['src/js/libs.js', 'src/js/vendor.js', 'src/js/main.js', 'src/js/polyfills/*.*'],
+    js     : ['src/js/libs.js', 'src/js/vendor.js', 'src/js/main.js', 'src/js/polyfills/*.*', 'src/js/modules.js'],
     img    : ['src/images/**/*.*', '!src/images/sprite/*.*'],
     sprite : 'src/images/sprite/*.*',
     fonts  : 'src/fonts/**/*.*'
