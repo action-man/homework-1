@@ -25,7 +25,8 @@ var paths = {
       img  : 'src/images/',
       css  : 'src/scss/core/'
     },
-    fonts  : 'dist/fonts/'
+    fonts  : 'dist/fonts/',
+    fav    : 'dist/'
   },
 
   // пути, по которым находятся исходники
@@ -35,7 +36,8 @@ var paths = {
     js     : ['src/js/libs.js', 'src/js/vendor.js', 'src/js/main.js', 'src/js/polyfills/*.*', 'src/js/modules.js'],
     img    : ['src/images/**/*.*', '!src/images/sprite/*.*'],
     sprite : 'src/images/sprite/*.*',
-    fonts  : 'src/fonts/**/*.*'
+    fonts  : 'src/fonts/**/*.*',
+    fav    : 'src/favicon.ico'
   },
 
   // пути к файлам, за изменениями которых будем следить
@@ -45,7 +47,8 @@ var paths = {
     js     : 'src/js/**/*.js',
     img    : ['src/images/**/*.*', '!src/images/sprite/*.*'],
     sprite : 'src/images/sprite/*.*',
-    fonts  : 'src/fonts/**/*.*'
+    fonts  : 'src/fonts/**/*.*',
+    fav    : 'src/favicon.ico'
   },
 
   clean: './dist'
@@ -115,6 +118,12 @@ gulp.task('fonts', function () {
 });
 
 
+gulp.task('fav', function () {
+  gulp.src(paths.src.fav)
+    .pipe(gulp.dest(paths.build.fav));
+});
+
+
 gulp.task('clean', function () {
   del(paths.clean);
 });
@@ -127,6 +136,7 @@ gulp.task('watch', function() {
   gulp.watch([paths.watch.img], ['img']);
   gulp.watch([paths.watch.sprite], ['sprite']);
   gulp.watch([paths.watch.fonts], ['fonts']);
+  gulp.watch([paths.watch.fav], ['fav']);
 });
 
 
@@ -135,7 +145,8 @@ gulp.task('build', [
   'styles',
   'js',
   'img',
-  'fonts'
+  'fonts',
+  'fav'
 ]);
 
 
