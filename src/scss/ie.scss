@@ -1,13 +1,40 @@
+@import 'core/_functions';
+@import 'core/_config';
+
+
+
 .ie8, .ie9 {
 
-  .placeholdersjs {
-    color: #48cbe8 !important;
+  .ie-ph-wrap {
+    position: relative;
+  }
+
+  .ie-ph {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: get-color('primary');
+    opacity: 1;
+    font-size: 13px;
+  }
+
+  .input_small + .ie-ph {
+    top: 8px;
+  }
+
+  .input_big + .ie-ph {
+    top: 20px;
+    font-size: 17px;
   }
 
 }
 
 
 .ie8 {
+
+  .file-input__orig-field {
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  }
 
   .project-list {
 
